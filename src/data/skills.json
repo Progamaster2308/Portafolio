@@ -1,0 +1,15 @@
+{
+  "attributes":[
+    {"name":"Adaptabilidad técnica","value":94,"text":"Aprendo tecnologías y frameworks según las necesidades reales de cada proyecto."},
+    {"name":"Retención técnica","value":92,"text":"Relaciono conceptos nuevos con conocimientos previos para aplicarlos en soluciones funcionales."},
+    {"name":"Liderazgo y gestión","value":90,"text":"Organizo objetivos, designo tareas específicas y colaboro con claridad dentro de equipos de desarrollo."},
+    {"name":"Responsabilidad","value":96,"text":"Doy seguimiento a cada compromiso y busco entregar resultados estables, comprensibles y útiles."}
+  ],
+  "categories":[
+    {"name":"Lenguajes","skills":["C++","Python","Java","PHP","JavaScript"]},
+    {"name":"Web y frontend","skills":["HTML","CSS","React","Vite"]},
+    {"name":"Backend y servidores","skills":["Node.js","Apache","REST APIs","Linux"]},
+    {"name":"Datos y servicios cloud","skills":["MySQL","MongoDB","Supabase","Firebase"]},
+    {"name":"Herramientas e infraestructura","skills":["Cisco","Git","GitHub","Docker","AWS","Netlify"]}
+  ]
+}

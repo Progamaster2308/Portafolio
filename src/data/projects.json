@@ -1,0 +1,43 @@
+[
+  {
+    "id":"frieren-delivery",
+    "name":"Frieren Delivery",
+    "type":"Delivery temático",
+    "description":"Plataforma de pedidos de comida inspirada en el universo del anime Frieren. Combina un catálogo visual, flujo de compra sencillo y una identidad fantástica coherente.",
+    "technologies":["JavaScript","HTML","CSS","Netlify"],
+    "live":"https://frierendelivery1.netlify.app/",
+    "github":"https://github.com/Progamaster2308/deliveryfrieren-gif",
+    "x":8,"y":5,"accent":"#78b6a7"
+  },
+  {
+    "id":"dandadan-express",
+    "name":"Dandadan Express",
+    "type":"Delivery temático",
+    "description":"Experiencia de pedidos de comida con estética inspirada en Dandadan. Presenta productos, navegación y proceso de pedido dentro de una interfaz enérgica y juvenil.",
+    "technologies":["JavaScript","HTML","CSS","Netlify"],
+    "live":"https://dandadandelivery.netlify.app/",
+    "github":"https://github.com/Progamaster2308/dandadan-gif",
+    "x":19,"y":4,"accent":"#d36f86"
+  },
+  {
+    "id":"chickencitos",
+    "name":"Chickencitos",
+    "type":"Marketplace de pedidos",
+    "description":"Marketplace orientado a pedidos, diseñado para mostrar productos de forma clara y convertir la exploración del catálogo en una compra directa y accesible.",
+    "technologies":["JavaScript","Frontend","Marketplace","Netlify"],
+    "live":"https://chickencitos.netlify.app/",
+    "github":"https://github.com/Progamaster2308/chickencitos1",
+    "x":24,"y":11,"accent":"#e2a447"
+  },
+  {
+    "id":"gruas-pino",
+    "name":"Grúas Pino",
+    "type":"Sistema empresarial real",
+    "description":"Sistema de gestión de registros para el corralón de una empresa de remolque de automóviles. Centraliza la operación diaria y facilita el seguimiento de vehículos y movimientos.",
+    "technologies":["Gestión de registros","Web empresarial","Producción"],
+    "live":"https://gruaspino84.com/",
+    "github":null,
+    "x":27,"y":8,"accent":"#d2a44f",
+    "public":true
+  }
+]
