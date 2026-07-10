@@ -58,3 +58,27 @@
 .intro-card #startButton{display:inline-flex;align-items:center;gap:16px;margin:5px auto 0;padding:12px 18px 12px 22px;border:1px solid #1d2c23;background:linear-gradient(180deg,#314438,#1b2b23);color:#efdfb8;box-shadow:0 8px 18px rgba(45,31,15,.25),inset 0 0 0 1px rgba(239,216,160,.14);font-size:.68rem;letter-spacing:.11em;transition:transform .18s,box-shadow .18s}.intro-card #startButton b{display:grid;place-items:center;width:25px;height:25px;border-left:1px solid rgba(239,216,160,.25);font-size:1rem}.intro-card #startButton:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(45,31,15,.34)}
 
 @media(max-width:620px){.intro-card{padding:34px 24px 37px}.intro-emblem{width:54px;height:54px;margin-bottom:14px}.intro-card h1{font-size:2.15rem}.journey-markers{grid-template-columns:1fr}.journey-markers span+span{border-left:0;border-top:1px solid rgba(114,80,40,.24)}.intro-card .intro-bio,.intro-card .intro-invitation{font-size:.68rem}}
+
+/* Controles táctiles para celulares y tabletas. */
+.touch-controls{display:none;position:absolute;inset:0;z-index:6;pointer-events:none;user-select:none;-webkit-user-select:none}
+.touch-dpad,.touch-actions{pointer-events:auto;position:absolute;bottom:max(18px,env(safe-area-inset-bottom))}
+.touch-dpad{left:max(16px,env(safe-area-inset-left));width:158px;height:158px;display:grid;grid-template-columns:repeat(3,50px);grid-template-rows:repeat(3,50px);gap:4px}
+.touch-dpad button,.touch-center,.touch-actions button{touch-action:none;-webkit-tap-highlight-color:transparent}
+.touch-dpad button{display:grid;place-items:center;border:1px solid rgba(229,202,133,.52);border-radius:10px;background:linear-gradient(145deg,rgba(20,31,26,.94),rgba(8,15,12,.92));color:#ecd99e;font-size:1rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05),0 5px 14px rgba(0,0,0,.35)}
+.touch-dpad button:active{transform:scale(.92);background:#3a4d40;color:#fff1bd}
+.touch-up{grid-column:2;grid-row:1}.touch-left{grid-column:1;grid-row:2}.touch-center{grid-column:2;grid-row:2;display:grid;place-items:center;color:rgba(210,181,108,.45);border:1px solid rgba(210,181,108,.15);border-radius:50%;background:rgba(8,14,12,.72)}.touch-right{grid-column:3;grid-row:2}.touch-down{grid-column:2;grid-row:3}
+.touch-actions{right:max(18px,env(safe-area-inset-right));display:flex;align-items:end;gap:13px}
+.touch-actions button{display:grid;place-items:center;border-radius:50%;color:#f0dda6;box-shadow:0 7px 20px rgba(0,0,0,.4),inset 0 0 0 2px rgba(239,211,142,.13)}
+.touch-actions button:active{transform:scale(.92);filter:brightness(1.25)}
+.touch-actions b{font:600 1rem Cinzel}.touch-actions span{font:600 .43rem Cinzel;letter-spacing:.08em}
+.touch-primary{width:76px;height:76px;border:2px solid #c6a75e;background:radial-gradient(circle at 35% 30%,#6c3d34,#2c1d1c 70%)}
+.touch-secondary{width:58px;height:58px;border:1px solid #a88e55;background:radial-gradient(circle at 35% 30%,#3d5145,#17241e 72%)}
+
+@media (hover:none) and (pointer:coarse),(max-width:720px){
+  .touch-controls{display:block}
+  .controls-strip{display:none}
+  .quest-log{bottom:184px;left:12px;width:min(265px,70vw);padding:10px 13px}
+  .interaction-hint{bottom:184px}
+}
+
+@media(max-width:480px){.touch-dpad{width:137px;height:137px;grid-template-columns:repeat(3,43px);grid-template-rows:repeat(3,43px)}.touch-primary{width:68px;height:68px}.touch-secondary{width:52px;height:52px}.touch-actions{gap:8px}.quest-log{bottom:163px}}

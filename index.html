@@ -32,6 +32,19 @@
         <div id="interactionHint" class="interaction-hint" aria-live="polite"></div>
         <div id="toast" class="toast" aria-live="polite"></div>
         <div class="controls-strip"><span>WASD / FLECHAS · MOVER</span><span>CLIC · ATACAR</span><span>E · INTERACTUAR</span><span>C · PERSONAJE</span></div>
+        <div id="touchControls" class="touch-controls" aria-label="Controles táctiles">
+          <div class="touch-dpad" aria-label="Movimiento">
+            <button class="touch-up" type="button" data-move="0,-1" aria-label="Mover arriba">▲</button>
+            <button class="touch-left" type="button" data-move="-1,0" aria-label="Mover a la izquierda">◀</button>
+            <span class="touch-center" aria-hidden="true">◆</span>
+            <button class="touch-right" type="button" data-move="1,0" aria-label="Mover a la derecha">▶</button>
+            <button class="touch-down" type="button" data-move="0,1" aria-label="Mover abajo">▼</button>
+          </div>
+          <div class="touch-actions">
+            <button id="touchCharacter" class="touch-secondary" type="button" aria-label="Abrir pergamino"><b>C</b><span>PERFIL</span></button>
+            <button id="touchAction" class="touch-primary" type="button" aria-label="Interactuar o atacar"><b>⚔</b><span>ACCIÓN</span></button>
+          </div>
+        </div>
       </section>
 
       <section id="intro" class="screen-layer">

@@ -90,6 +90,7 @@ export class PortfolioScene extends Phaser.Scene{
   enemyAt(x,y){return this.enemies.find(e=>e.state!=='DYING'&&e.gridX===x&&e.gridY===y)}
   distance(o){return Math.abs(o.x-this.playerGrid.x)+Math.abs(o.y-this.playerGrid.y)}
   interactNearest(){const chest=this.projectChests.find(p=>this.distance(p)<=1);const shrine=this.shrineObjects.find(s=>this.distance(s)<=1);if(chest)return this.openProject(chest);if(shrine)return this.interactShrine(shrine);ui.showToast('Acércate a un altar o cofre para interactuar.')}
+  touchAction(){const enemy=this.enemies.find(e=>e.state!=='DYING'&&this.distance({x:e.gridX,y:e.gridY})<=2);if(enemy)return this.attackEnemy(enemy);this.interactNearest()}
 
   interactShrine(shrine){if(this.distance(shrine)>1){ui.showToast('El santuario está demasiado lejos.');return}this.visited.add(shrine.title);this.tweens.add({targets:shrine.sprite,scale:1.18,yoyo:true,duration:220});ui.openModal('SANTUARIO DEL CONOCIMIENTO',shrine.title,`<p>${shrine.text}</p><p class="insight">Aptitud registrada en el grimorio de Bryan.</p>`);this.updateProgress()}
 
