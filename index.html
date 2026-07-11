@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09100e" />
+    <meta name="description" content="Crónicas de Bryan: trayectoria, habilidades y proyectos de Bryan Nuñez." />
+    <title>Bryan Nuñez Portafolio</title>
+    <link rel="icon" type="image/png" href="/Portafolio/bryan-logo.png" />
+    <link rel="apple-touch-icon" href="/Portafolio/bryan-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/Portafolio/assets/index-CVMWp0uI.js"></script>
+    <link rel="stylesheet" crossorigin href="/Portafolio/assets/index-7EwarZG_.css">
+  </head>
+  <body>
+    <main id="app">
+      <section id="game-shell" aria-label="Mundo de Crónicas de Bryan">
+        <div id="game"></div>
+        <div class="hud top-left">
+          <div class="portrait-rune"><img src="/Portafolio/bryan-profile.jpg" alt="Fotografía de Bryan Nuñez"></div>
+          <div class="identity"><small>DESARROLLADOR JUNIOR</small><strong>Bryan Nuñez</strong><div class="meter"><i id="energyBar"></i></div><span id="energyText">Energía de código 100 / 100</span></div>
+        </div>
+        <div class="hud top-right">
+          <div class="minimap-frame"><canvas id="minimap" width="180" height="120"></canvas><span>TIERRAS DEL CÓDIGO</span></div>
+          <button id="characterButton" class="rune-button" type="button">C · GRIMORIO</button>
+        </div>
+        <aside class="quest-log">
+          <small>MISIÓN ACTIVA</small><strong>El sendero del ingeniero</strong>
+          <p id="questText">Explora los santuarios del conocimiento.</p>
+          <div><span id="shrineProgress">Santuarios 0/4</span><span id="enemyProgress">Guardianes 0/3</span></div>
+        </aside>
+        <div id="interactionHint" class="interaction-hint" aria-live="polite"></div>
+        <div id="toast" class="toast" aria-live="polite"></div>
+        <div class="controls-strip"><span>WASD / FLECHAS · MOVER</span><span>CLIC · ATACAR</span><span>E · INTERACTUAR</span><span>C · PERSONAJE</span></div>
+        <div id="touchControls" class="touch-controls" aria-label="Controles táctiles">
+          <div class="touch-dpad" aria-label="Movimiento">
+            <button class="touch-up" type="button" data-move="0,-1" aria-label="Mover arriba">▲</button>
+            <button class="touch-left" type="button" data-move="-1,0" aria-label="Mover a la izquierda">◀</button>
+            <span class="touch-center" aria-hidden="true">◆</span>
+            <button class="touch-right" type="button" data-move="1,0" aria-label="Mover a la derecha">▶</button>
+            <button class="touch-down" type="button" data-move="0,1" aria-label="Mover abajo">▼</button>
+          </div>
+          <div class="touch-actions">
+            <button id="touchCharacter" class="touch-secondary" type="button" aria-label="Abrir pergamino"><b>C</b><span>PERFIL</span></button>
+            <button id="touchAction" class="touch-primary" type="button" aria-label="Interactuar o atacar"><b>⚔</b><span>ACCIÓN</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="intro" class="screen-layer">
+        <article class="intro-card parchment">
+          <div class="intro-emblem" aria-hidden="true"><span>BN</span></div>
+          <p class="eyebrow">CRÓNICAS DE LAS TIERRAS DEL CÓDIGO</p>
+          <div class="intro-divider" aria-hidden="true"><i></i><b>◆</b><i></i></div>
+          <h1><span>Adéntrate en</span><em>mi trayectoria</em></h1>
+          <p class="intro-role"><strong>Bryan Nuñez</strong> · Desarrollador Junior</p>
+          <p class="intro-bio">Técnico Superior Universitario en Tecnologías de la Información y estudiante de Ingeniería en Desarrollo y Gestión de Software Multiplataforma.</p>
+          <div class="journey-markers" aria-label="Contenido de la travesía">
+            <span><b>01</b> Formación</span><span><b>02</b> Proyectos</span><span><b>03</b> Habilidades</span>
+          </div>
+          <p class="intro-invitation">Recorre el mapa, descubre los conocimientos que he adquirido y conoce los proyectos que han marcado mi formación.</p>
+          <button id="startButton" type="button"><span>Comenzar la travesía</span><b>→</b></button>
+        </article>
+      </section>
+
+      <section id="modal" class="screen-layer hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <article class="parchment modal-card">
+          <button class="close-button" data-close="modal" aria-label="Cerrar">×</button>
+          <p id="modalKicker" class="eyebrow"></p><h2 id="modalTitle"></h2><div id="modalContent"></div>
+          <div class="project-actions">
+            <a id="liveLink" class="primary-link" href="#" target="_blank" rel="noopener" hidden>VISITAR PROYECTO <span>↗</span></a>
+            <a id="repoLink" class="secondary-link" href="#" target="_blank" rel="noopener" hidden>VER REPOSITORIO <span>↗</span></a>
+          </div>
+        </article>
+      </section>
+
+      <section id="characterSheet" class="screen-layer hidden" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+        <article class="grimorio">
+          <button class="close-button" data-close="characterSheet" aria-label="Cerrar">×</button>
+          <header><p class="eyebrow">HOJA DEL PERSONAJE</p><h2 id="sheetTitle">Bryan Nuñez</h2><p>Desarrollador de Software Multiplataforma · Junior</p></header>
+          <section class="adventurer-profile">
+            <div class="profile-medallion"><img src="/Portafolio/bryan-profile.jpg" alt="Bryan Nuñez"></div>
+            <div>
+              <p class="eyebrow">PERFIL DEL AVENTURERO</p>
+              <h3>Aprendizaje versátil orientado a proyectos</h3>
+              <p>Como estudiante de Ingeniería en Desarrollo y Gestión de Software Multiplataforma, he desarrollado proyectos con objetivos, públicos y necesidades muy diferentes. Cada reto me ha llevado a explorar nuevas tecnologías y frameworks, aprender a utilizarlos con bases sólidas y elegir las herramientas adecuadas para convertir una idea en una solución funcional.</p>
+              <p>Esta variedad me permite adaptarme a proyectos web, sistemas empresariales, experiencias de comercio y aplicaciones conectadas a servicios en la nube, manteniendo siempre una mentalidad de aprendizaje continuo.</p>
+            </div>
+          </section>
+          <div class="book-grid">
+            <section><h3>Atributos de liderazgo</h3><div id="attributes"></div><blockquote>“Un buen líder no reparte tareas: alinea talentos con un propósito compartido.”</blockquote></section>
+            <section><h3>Árbol de habilidades</h3><div id="skillTree"></div></section>
+          </div>
+          <div class="scroll-rod-bottom" aria-hidden="true"></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
